@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/models/Cat.js"],"names":["Cat","mongoose","model","name","String"],"mappings":";;;;;;;AAAA;;;;AAEO,IAAMA,GAAG,GAAGC,qBAASC,KAAT,CAAe,KAAf,EAAsB;AAAEC,EAAAA,IAAI,EAAEC;AAAR,CAAtB,CAAZ","sourcesContent":["import mongoose from \"mongoose\";\r\n\r\nexport const Cat = mongoose.model('Cat', { name: String });"],"file":"Cat.js"}
