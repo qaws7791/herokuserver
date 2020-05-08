@@ -9,7 +9,7 @@
     "start": "npm run build && node ./build/",
     "build": "npm run clean && npm run babel-build",
     "babel-build": "babel -d ./build ./src -s",
-    "clean": "mkdir build"
+    "clean": "rm -rf build && mkdir build"
   },
   "keywords": [],
   "author": "",
