@@ -13,5 +13,6 @@ type Todo {
 
 type Mutation {
     createTodo(name: String!,did: Boolean): Todo!
+    deleteTodo(id: ID!): Boolean!
 }
 `;

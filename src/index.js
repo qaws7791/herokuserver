@@ -25,7 +25,7 @@ const startServer = async () => {
       
       server.applyMiddleware({ app });
       
-      await mongoose.connect("mongodb+srv://ad:ad@cluster0-uayz0.mongodb.net/graph?retryWrites=true&w=majority",{
+      await mongoose.connect("mongodb://localhost:27017/graph",{
            useNewUrlParser: true, 
            useUnifiedTopology: true
       });
