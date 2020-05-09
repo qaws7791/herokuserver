@@ -5,12 +5,14 @@ type Query {
     hello: String!
     cats: [Cat!]!
 }
-type Cat {
+type Todo {
     id: ID!
     name: String!
+    data: String!,
+    did: Boolean
 }
 
 type Mutation {
-    createCat(name: String!): Cat!
+    createTodo(name: String!,data:String!): Todo!
 }
 `;

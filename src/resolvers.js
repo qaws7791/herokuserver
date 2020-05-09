@@ -1,16 +1,16 @@
-import { Cat } from "./models/Cat";
+import { Todo } from "./models/Todo";
 import "@babel/polyfill";
 
 export const resolvers = {
     Query: {
         hello: () => 'hello',
-        cats: () => Cat.find()
+        Todos: () => Todo.find()
     },
     Mutation: {
-        createCat: async (_, { name }) => {
-           const cat = new Cat({ name });
-           await cat.save().then(() => console.log({name}));
-           return cat;
+        createTodo: async (_, { name, data }) => {
+           const Todo = new Todo({ name,data, did: false });
+           await Todo.save().then(() => console.log({name}));
+           return Todo;
         }
     }
 };
