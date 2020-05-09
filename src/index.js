@@ -3,7 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import { typeDefs } from "./typeDefs";
 import { resolvers } from "./resolvers";
-import "cors";
+import { cors } from "cors";
 // const mongodb_uri ="mongodb+srv://ad:ad@cluster0-uayz0.mongodb.net/graph?retryWrites=true&w=majority"
 //mongodb://localhost:27017/graph
 
@@ -15,11 +15,6 @@ import "cors";
 const startServer = async () => {
     const app = express();
     app.use(cors());
-    app.all('/*', function(req, res, next) {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "X-Requested-With");
-      next();
-    });
     const PORT = process.env.PORT || 4000;
 
     const server = new ApolloServer({
