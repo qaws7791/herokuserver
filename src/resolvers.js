@@ -7,10 +7,10 @@ export const resolvers = {
         todos: () => Todo.find()
     },
     Mutation: {
-        createTodo: async (_, { name, data }) => {
-           const Todo = new Todo({ name,data, did: false });
-           await Todo.save().then(() => console.log({name}));
-           return Todo;
+        createTodo: async (_, { name}) => {
+           const newTodo = new Todo({ name,did:false });
+           await newTodo.save().then(() => console.log({name}));
+           return newTodo;
         }
     }
 };

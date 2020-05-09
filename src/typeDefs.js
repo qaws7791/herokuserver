@@ -8,11 +8,10 @@ type Query {
 type Todo {
     id: ID!
     name: String!
-    data: String!,
-    did: Boolean
+    did:Boolean
 }
 
 type Mutation {
-    createTodo(name: String!,data:String!): Todo!
+    createTodo(name: String!,did: Boolean): Todo!
 }
 `;
