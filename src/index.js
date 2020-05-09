@@ -6,7 +6,7 @@ import { resolvers } from "./resolvers";
 
 
 // const mongodb_uri ="mongodb+srv://ad:ad@cluster0-uayz0.mongodb.net/graph?retryWrites=true&w=majority"
-
+//mongodb://localhost:27017/graph
 
 
 
@@ -25,7 +25,7 @@ const startServer = async () => {
       
       server.applyMiddleware({ app });
       
-      await mongoose.connect("mongodb://localhost:27017/graph",{
+      await mongoose.connect("mongodb+srv://ad:ad@cluster0-uayz0.mongodb.net/graph?retryWrites=true&w=majority",{
            useNewUrlParser: true, 
            useUnifiedTopology: true
       });
