@@ -3,8 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import { typeDefs } from "./typeDefs";
 import { resolvers } from "./resolvers";
-
-
+import "cors";
 // const mongodb_uri ="mongodb+srv://ad:ad@cluster0-uayz0.mongodb.net/graph?retryWrites=true&w=majority"
 //mongodb://localhost:27017/graph
 
@@ -15,7 +14,7 @@ import { resolvers } from "./resolvers";
 
 const startServer = async () => {
     const app = express();
-
+    app.use(cors());
     const PORT = process.env.PORT || 4000;
 
     const server = new ApolloServer({
