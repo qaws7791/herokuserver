@@ -4,7 +4,7 @@ import "@babel/polyfill";
 export const resolvers = {
     Query: {
         hello: () => 'hello',
-        Todos: () => Todo.find()
+        todos: () => Todo.find()
     },
     Mutation: {
         createTodo: async (_, { name, data }) => {
