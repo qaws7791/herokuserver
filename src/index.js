@@ -26,7 +26,7 @@ const startServer = async () => {
            useNewUrlParser: true, 
            useUnifiedTopology: true
       });
-
+      mongoose.set('useFindAndModify', false);
       app.listen(PORT, () =>
         console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
       );

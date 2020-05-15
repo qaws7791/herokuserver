@@ -15,7 +15,16 @@ export const resolvers = {
         deleteTodo: async (_, { id }) => {
             await Todo.findByIdAndRemove(id);
             return true;
+        },
+        updateTodo: async (_, { id, name, did }) => {
+            await Todo.findByIdAndUpdate(id,{name:name, did:did});
+            return Todo.findById(id);
+        },
+        updateDid: async (_, { id,did }) => {
+            await Todo.findByIdAndUpdate(id,{did:did});
+            return Todo.findById(id);
         }
+
     }
 };
 
